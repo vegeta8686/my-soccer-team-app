@@ -1,0 +1,33 @@
+.extract-csv {
+  padding: 10px;
+
+  .team-name-input {
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  .upload-file {
+    margin-top: 10px;
+  }
+}
+
+.light-btn {
+  padding: 8px 20px;
+  color: rgb(48, 151, 211);
+  background-color: white;
+  cursor: pointer;
+  border-color: rgb(223, 217, 217);
+  border-radius: 10px;
+
+  &:hover{
+    background-color: rgb(48, 151, 211);
+    color: white;
+  }
+}
+.error {
+  padding: 10px;
+  color: rgb(199, 79, 79);
+}
+.change {
+  margin-left: 10px;
+}

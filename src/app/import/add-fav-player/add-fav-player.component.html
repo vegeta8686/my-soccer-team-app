@@ -1,0 +1,21 @@
+<div class="add-fav-player">
+  <div class="sub-heading">Select Player</div>
+  <div class="container">
+    <table class="table">
+      <tr class="table-header">
+        <th *ngFor="let column of playerList?.headers">{{column}}</th>
+      </tr>
+      <tr *ngFor="let playerData of playerList?.records; let rowIndex = index"
+        [style.border]="selectedRow === rowIndex ? 'solid 1px #b7b73c': ''">
+        <td *ngFor="let player of playerData; let i= index" (click)="favPlayer(playerData, rowIndex)" class="pointer">
+          <input type="radio" name="favPlayer" [id]="player" [value]="player" *ngIf="i  === 0" class="radio-input">
+          <label [for]="player">{{player}}</label>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <button type="button" class="primary-btn blue-bg return" (click)="return()">Return</button>
+    <button type="submit" class="primary-btn blue-bg" [disabled]="!selectedPlayer" (click)="submit()">Continue</button>
+  </div>
+</div>

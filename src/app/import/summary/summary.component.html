@@ -1,0 +1,39 @@
+<div class="summary">
+  <div class="sub-heading">Your're adding</div>
+  <div class="flex-container">
+    <div>
+      <label for="">Team Name</label><br>
+      <span>{{importData?.teamName}}</span>
+    </div>
+    <div>
+      <label for="">Player Data</label><br>
+      <span> {{importData?.fileName}}</span>
+    </div>
+    <div>
+      <label for="">Favourite Player</label><br>
+      <span>{{favPlayer?.favPlayer[0]}}</span>
+    </div>
+  </div>
+  <div class="flex-container">
+    <div>
+      <label for="">Goal Keepers</label><br>
+      <span>{{allPosition.goalkeepers}}</span>
+    </div>
+    <div>
+      <label for="">Defenders</label><br>
+      <span>{{allPosition.defenders}}</span>
+    </div>
+    <div>
+      <label for="">Forwards</label><br>
+      <span>{{allPosition.forwards}}</span>
+    </div>
+    <div>
+      <label for="">Mid Fielders</label><br>
+      <span>{{allPosition.midfielders}}</span>
+    </div>
+  </div>
+  <div class="footer">
+    <button class="primary-btn blue-bg return" (click)="previous()">Return</button>
+    <button class="primary-btn blue-bg" (click)="next()">Continue</button>
+  </div>
+</div>

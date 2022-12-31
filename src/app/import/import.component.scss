@@ -1,0 +1,24 @@
+.steps {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+
+  .step-1,
+  .step-2,
+  .step-3 {
+    width: 33%;
+    background-color: rgba(223, 211, 211, 0.925);
+    padding: 10px;
+  }
+
+  .step-1,
+  .step-2 {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+}
+.error {
+  background-color: rgb(199, 79, 79) !important;
+}

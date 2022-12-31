@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="header-section">
+    <h3 class="title">My Team</h3>
+    <button class="primary-btn blue-bg" routerLink="/import">Import Team</button>
+  </div>
+  <div class="player-list">
+    <table class="table">
+      <tr class="table-header">
+        <th *ngFor="let column of columns">
+          <div class="cell">{{column}}</div>
+        </th>
+      </tr>
+      <tr  *ngFor="let row of rows">
+        <td *ngFor="let player of row">
+          <div class="cell" >{{player}}</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

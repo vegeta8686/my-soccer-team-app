@@ -1,0 +1,24 @@
+<div class="extract-csv">
+  <form [formGroup]="form">
+    <div class="team-name">
+      <label for="teamName">Team Name</label><br>
+      <input type="text" id="teamName" placeholder="Enter Team Name" class="team-name-input" formControlName="teamName" autocomplete="off">
+    </div>
+    <div class="upload-file">
+      <label for="file">File</label><br>
+      <button class="light-btn" type="button" (click)="inputFile.click()" *ngIf="!selectedFile">Select File</button><br>
+      <input type="text" class="team-name-input" *ngIf="selectedFile" [value]="selectedFile" readonly formControlName="fileName">
+      <input type="file" accept=".csv" id="file" style="display: none;" #inputFile (change)="onSelect($event)"
+      (click)="onClick($event)">
+      <button type="button" *ngIf="selectedFile" (click)="selectedFile = ''" class="primary-btn change">Reupload</button>
+      <div class="error" *ngIf="errorMsg">{{errorMsg}}</div>
+      <div class="error" *ngIf="playerRecords?.length === 0">Please add some data</div>
+      <div class="suggestion-list" *ngIf="columns?.length && columns?.length !== staticColumns?.length">
+        <span class="error">Player Name,Jersey Number,Position,Nationality,Height,Weight</span>
+      </div>
+    </div>
+    <div class="footer">
+      <button type="submit" (click)="onContinue()" class="primary-btn blue-bg" [disabled]="!isDisable()">Continue</button>
+    </div>
+  </form>
+</div>
